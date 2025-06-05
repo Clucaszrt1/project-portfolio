@@ -1,0 +1,278 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=WDXL+Lubrifont+TC&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: "Alumni Sans SC", sans-serif;
+}
+
+html, body{
+    height: 100%;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* Header e Menus */
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    border: 1px solid black;
+    border-radius: 0 0 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.logo h1{
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.menu ul{
+    display: flex;
+    gap: 20px;
+}
+
+.menu li, a{
+    list-style: none;
+    text-decoration:none;
+    font-size: 20px;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+
+.menu a:hover{
+    padding: 10px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 40px;
+    background-color: black;
+    transform: translateY(-3px);
+    transition: 0.5s;
+}
+
+/* Apresentação principal  */
+
+.big-title{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+
+.titles h2{
+    font-size: 100px;
+    font-weight: 100;
+    text-align: center;
+}
+
+
+
+.btn-talk button{
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-talk button:hover{
+    color: white;
+    background-color: black;
+    transition: 0.5s;
+}
+
+/* Sobre mim e imagen figurativa */
+
+.about-me{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    height: 50vh;
+    gap: 40px;
+}
+
+.img-camila{
+    width: 400px;
+    height: 350px;
+    border-radius: 30px;
+    background-image: url(/imagens/jeffery-erhunse-vp9mRauo68c-unsplash.jpg);
+    background-size: cover;
+    background-position: 0;
+}
+
+.about{
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    height: 40vh;
+}
+
+.about h2{
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.about article{
+    max-width: 500px;
+    font-size: 20px;
+
+
+}
+
+/* Área de serviços e Skills */
+
+.services-conteiner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 50vh;
+    border-bottom: 1px solid black;
+    text-align: center;
+    width: 100%;
+}
+
+.services-conteiner h2{
+    font-size: 35px;
+    font-weight: 450;
+    letter-spacing: 5px;
+    
+}
+
+.services-conteiner p{
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.services img{
+    height: 100px;
+    width: 100px;
+}
+
+
+.services h1{
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+/* Depoimento de Cliente */
+
+.depoimento{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 15vh;
+    row-gap: 10px;
+    border-bottom: 1px solid black;
+    padding: 70px;
+
+}
+
+
+.title-depoimento h1{
+    font-weight: 450;
+    font-size: 40px;
+}
+
+.depoimento-article p{
+    margin: 0 auto;
+    font-size: 20px;
+    width: 70%;
+}
+
+.title-forms h1{
+    text-align: center;
+    font-weight: 450;
+    font-size: 40px;
+}
+
+/* Formulário para contato */
+
+.forms-contato{
+    height: auto;
+    width: 100%;
+
+
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+
+.conteiner-inputs input{
+    font-size: 20px;
+    width: 300px;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+
+.formulario textarea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    padding: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+    border-radius: 20px;
+    min-height: 20vh;
+    max-height: 20vh;
+    max-width: 600px;
+    min-width: 600px;
+
+}
+
+
+button{
+    padding: 5px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    transition: all 0.5s ease;
+    background-color: white;
+
+}
+
+button:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    transition: 0.5s;
+    
+}
+
+
+
+
