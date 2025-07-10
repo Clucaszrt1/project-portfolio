@@ -1,278 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=WDXL+Lubrifont+TC&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=WDXL+Lubrifont+TC&display=swap');
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-     font-family: "Alumni Sans SC", sans-serif;
+:root {
+  --sombreamento: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  --sombreamento-hover: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --transicao: all 0.3 ease;
+  --fonte_forte: 500;
+  --fonte_fraca: 100;
 }
 
-html, body{
-    height: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alumni Sans SC", sans-serif;
 }
 
-
-html{
-    scroll-behavior: smooth;
+html, body {
+  height: 100%;
 }
 
-
-/* Header e Menus */
-
-header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 10vh;
-    border: 1px solid black;
-    border-radius: 0 0 20px 20px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%
 }
 
-.logo h1{
-    font-weight: 500;
-    letter-spacing: 2px;
+/* Área do Header e dos menus */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 5rem;
+  border: 1px solid black;
+  border-radius: 0 0 20px 20px;
+  box-shadow: var(--sombreamento);
 }
 
-.menu ul{
-    display: flex;
-    gap: 20px;
+/* Ajuste do Título Logo */
+.logo h1 {
+  font-weight: var(--fonte_forte);
+  letter-spacing: 2px;
 }
 
-.menu li, a{
-    list-style: none;
-    text-decoration:none;
-    font-size: 20px;
-    color: black;
-    transition: all 0.3s ease;
+.menu ul {
+  display: flex;
+  gap: 1rem;
 }
 
+/* Estilos para os itens da lista e links */
+.menu li {
+  list-style: none;
+}
+.menu a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  transition: var(--transicao);
+  padding: 0.5rem 0.5rem;
+}
+/* Estilo para quando o mouse passar nos links de serviço da lista */
+.menu a:hover {
+  color: white;
+  border-radius: 40px;
+  background-color: black;
+  box-shadow: var(--sombreamento-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--sombreamento-hover);
+  transition: 0.3s;
+}
 
-.menu a:hover{
-    padding: 10px;
-    color: white;
-    border: 1px solid black;
-    border-radius: 40px;
-    background-color: black;
-    transform: translateY(-3px);
-    transition: 0.5s;
+/* Responsividade do Header */
+
+@media (max-width: 450px) {
+
+
+  .logo h1 {
+    font-size: 2.5rem;
+    line-height: 2rem;
+    letter-spacing: 0.2rem;
+  }
+  .menu ul {
+    gap: 0;
+  }
+
+  .menu a {
+    font-size: 1.9rem;
+  }
 }
 
 /* Apresentação principal  */
 
-.big-title{
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid black;
+.Home {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
 }
 
-.titles h2{
-    font-size: 100px;
-    font-weight: 100;
+/* Estilo para o título principal */
+.titles h2 {
+  font-size: 100px;
+  font-weight: 100;
+  text-align: center;
+}
+
+/* Estilo para o botão "Fale comigo" */
+
+.btn-talk button {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Estilo para quando o mouse pa ssar pelo botão "Fale comigo" */
+
+.btn-talk button:hover {
+  color: white;
+  background-color: black;
+  transform: translateY(-2px);
+  box-shadow: var(--sombreamento-hover);
+}
+
+/* Responsividade do Home */
+
+@media (max-width: 450px) {
+  .Home {
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .titles h2 {
+    font-size: 4.5rem;
+  }
+}
+
+/* Área de sobre mim e imagem figurativa*/
+
+.about-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  height: auto;
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.img-camila {
+  width: 400px;
+  height: 350px;
+  border-radius: 30px;
+  background-image: url(./imagens/jeffery-erhunse-vp9mRauo68c-unsplash.jpg);
+  background-size: cover;
+  background-position: 0;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  height: 40vh;
+}
+
+.about-text h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.about-text p {
+  max-width: 500px;
+  font-size: 20px;
+}
+
+/* Responsividade Sobre-mim */
+
+@media (max-width: 450px) {
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+  }
+
+  .img-camila {
+    margin-top: 10px;
+  }
+  .about-text {
+    text-align: justify;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 0 10px;
+  }
+
+  .about-text h2 {
     text-align: center;
-}
-
-
-
-.btn-talk button{
-    width: 150px;
-    height: 50px;
-    font-size: 20px;
-    border-radius: 20px;
-    background-color: white;
-    transition: all 0.3s ease;
-}
-
-.btn-talk button:hover{
-    color: white;
-    background-color: black;
-    transition: 0.5s;
-}
-
-/* Sobre mim e imagen figurativa */
-
-.about-me{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid black;
-    height: 50vh;
-    gap: 40px;
-}
-
-.img-camila{
-    width: 400px;
-    height: 350px;
-    border-radius: 30px;
-    background-image: url(./imagens/jeffery-erhunse-vp9mRauo68c-unsplash.jpg);
-    background-size: cover;
-    background-position: 0;
-}
-
-.about{
-    display:flex;
-    flex-direction: column;
-    align-items: start;
-    height: 40vh;
-}
-
-.about h2{
-    font-size: 40px;
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-
-.about article{
-    max-width: 500px;
-    font-size: 20px;
-
-
+    width: 100%;
+  }
 }
 
 /* Área de serviços e Skills */
 
+.serviços{
+  border-bottom: 1px solid black;
+}
+
+
 .services-conteiner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 50vh;
+  text-align: center;
+  width: 100%;
+}
+
+.services-conteiner h3 {
+  font-size: 35px;
+  font-weight: 450;
+  letter-spacing: 5px;
+}
+
+.services-conteiner p {
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.services-conteiner img {
+  height: 100px;
+  width: 100px;
+}
+
+.services-title h2 {
+  letter-spacing: 3px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+/* Responsividade da área de serviços */
+
+@media (max-width: 450px){
+ 
+  .services-conteiner{
     display: flex;
-    align-items: center;
-    gap: 10px;
-    height: 50vh;
-    border-bottom: 1px solid black;
-    text-align: center;
-    width: 100%;
-}
-
-.services-conteiner h2{
-    font-size: 35px;
-    font-weight: 450;
-    letter-spacing: 5px;
-    
-}
-
-.services-conteiner p{
-    width: 80%;
-    margin: 0 auto;
-    text-align: justify;
-    margin-top: 15px;
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.services img{
-    height: 100px;
-    width: 100px;
+    flex-direction: column;
+    height: auto;
+    gap: 1.5rem;
+  }
+  .serviços{
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+  }
 }
 
 
-.services h1{
-    letter-spacing: 3px;
-    text-align: center;
-    margin-top: 10px;
-    font-size: 40px;
-    font-weight: 500;
-}
 
 /* Depoimento de Cliente */
 
-.depoimento{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height: 15vh;
-    row-gap: 10px;
-    border-bottom: 1px solid black;
-    padding: 70px;
+.depoimento {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  gap: 0.5rem;
+  border-bottom: 1px solid black;
+  padding: 3rem 0;
+}
 
+.title-depoimento h2 {
+  font-weight: 450;
+  font-size: 4rem;
+}
+
+.depoimento-article p {
+  font-size: 2rem;
+  padding: 0 2rem;
 }
 
 
-.title-depoimento h1{
-    font-weight: 450;
-    font-size: 40px;
-}
+@media (max-width:450px){
+  .depoimento{
+    height: auto;
+    gap: 0.5rem;
+  }
+  .depoimento-article{
+    text-align: justify;
+  }
 
-.depoimento-article p{
-    margin: 0 auto;
-    font-size: 20px;
-    width: 70%;
-}
 
-.title-forms h1{
-    text-align: center;
-    font-weight: 450;
-    font-size: 40px;
+
 }
 
 /* Formulário para contato */
 
-.forms-contato{
+.title-forms h2 {
+  text-align: center;
+  font-weight: 450;
+  font-size: 40px;
+}
+
+
+.forms-contato {
+  height: auto;
+  width: 100%;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.conteiner-inputs input {
+  font-size: 20px;
+  width: 300px;
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.formulario textarea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60rem;
+  padding: 5px;
+  font-size: 20px;
+  margin-top: 5px;
+  border-radius: 20px;
+  min-height: 20vh;
+  max-height: 20vh;
+  max-width: 60rem;
+  min-width: 60rem;
+}
+
+button {
+  padding: 5px;
+  color: black;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  transition: all 0.5s ease;
+  background-color: white;
+}
+
+button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  transition: 0.5s;
+}
+
+
+/* Responsividade para formulário */
+
+@media (max-width:450px){
+  .forms-contato{ 
+    text-align: center; 
     height: auto;
-    width: 100%;
-
-
-}
-
-.formulario{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-}
-
-
-.conteiner-inputs input{
-    font-size: 20px;
-    width: 300px;
-    border-radius: 20px;
-    border: 1px solid black;
-    padding: 5px;
-}
-
-
-.formulario textarea{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 600px;
-    padding: 5px;
-    font-size: 20px;
-    margin-top: 5px;
-    border-radius: 20px;
-    min-height: 20vh;
-    max-height: 20vh;
-    max-width: 600px;
-    min-width: 600px;
-
-}
-
-
-button{
-    padding: 5px;
-    color: black;
-    border: 1px solid black;
-    border-radius: 20px;
-    width: 100px;
-    height: 40px;
-    font-size: 20px;
-    transition: all 0.5s ease;
-    background-color: white;
-
-}
-
-button:hover{
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-    transition: 0.5s;
+    padding: 1rem 0;
     
+  }
+
+  .title-forms h2{
+    margin-bottom: 1rem;
+  }
+
+  .formulario{
+    gap: 1rem;
+  }
+  .conteiner-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .conteiner-inputs input{
+    width: 40rem;
+    height: 5vh;
+    padding: 0 0.5rem;
+  }
+
+  
+
+
+
+
 }
-
-
-
-
